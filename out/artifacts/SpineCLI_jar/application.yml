@@ -1,0 +1,39 @@
+server:
+  port: 10110
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  profiles:
+    active: dev
+  datasource:
+    mysql:
+      username: root
+      password: root
+      url: jdbc:mysql://47.94.7.95:3306/spine?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    hetu:
+      username: root
+      url: jdbc:lk://10.2.174.241:8080/hive
+      driver-class-name: io.hetu.core.jdbc.OpenLooKengDriver
+      validation-query: select 1
+    mail:
+      host: smtp.qq.com
+      username: 396008188@qq.com
+      password: gxnmlzczwetibhhg
+      default-encoding: UTF-8
+hetu:
+  url: http://10.2.174.241:8080
+  session:
+    timeout: 2m
+oss:
+  endpoint: oss-cn-beijing.aliyuncs.com
+  accessKeyId: LTAI5tKdNNBNbgg9mkBFd1tg
+  accessKeySecret: zPWsPXYeK6jEJBoM3U9Q8Orjn2Wq0D
+  bucket:
+    queryResult: spinelocaltest
+mybatis-plus:
+  type-enums-package: com.shuzhihui.utils.enums
+druid:
+  mysql:
+    usePingMethod: false
